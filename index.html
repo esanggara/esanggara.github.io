@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe game</title>  
+  <link rel='stylesheet prefetch' href='https://getbootstrap.com/2.3.2/assets/css/bootstrap.css'>
+  <link rel="stylesheet" href="css/style.css">  
+</head>
+<body style="background-color: #ffff66;">
+  <div id="custom-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center">TIC - TAC - TOE</h4>
+        </div>
+        <div class="modal-body text-center">
+          <p>Tic-tac-toe (American English), noughts and crosses (British English) or Xs and Os, is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.<i> - Wikipedia</i><p>
+          <br>
+          <p>Chose Your Game!</p>
+          <select class="typeofgame" id="typeofgame">
+            <option value="">Select Game</option>
+            <option value="2players">2 Players</option>
+            <option value="vscomputer">vs Computer</option>
+          </select>
+          <select class="formatgame" id="formatgame">
+            <option value="">Select Format</option>
+            <option value="3x3">3 X 3</option>
+            <option value="4x4">4 X 4</option>
+          </select>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tic-tac-toe" style="display: none;">
+    <div class="span3 new_span card text-center">
+      <div class="row">
+      <h1 class="span3">Tic Tac Toe</h1>
+        <div class="span3">
+          <div class="input-prepend input-append">
+            <span class="add-on win_text">O won</span>
+            <strong id="o_win" class="win_times add-on">0</strong>
+            <span class="add-on">time(s)</span>
+          </div>
+          <div class="input-prepend input-append">
+            <span class="add-on win_text">X won</span>
+            <strong id="x_win" class="win_times add-on">0</strong>
+            <span class="add-on">time(s)</span>
+          </div>            
+        </div>        
+      </div>
+
+      <ul class="row" id="game">
+        <li id="one" class="btn span1 enable" >+</li>
+        <li id="two" class="btn span1 enable">+</li>
+        <li id="three" class="btn span1 enable">+</li>
+        <li id="four" class="btn span1 enable">+</li>
+        <li id="five" class="btn span1 enable">+</li>
+        <li id="six" class="btn span1 enable">+</li>
+        <li id="seven" class="btn span1 enable">+</li>
+        <li id="eight" class="btn span1 enable">+</li>
+        <li id="nine" class="btn span1 enable">+</li>
+      </ul>
+      <div class="row">
+        <a href="#" id="reset" onclick="" class="btn-success btn span3" >Restart</a>
+        <a href="#" id="reset" onclick="refresh()" class="btn-danger btn span3" >Reset</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="tic-tac-toe-4" style="display: none;">
+    <div class="span4 new_span_4">
+      <div class="row">
+      <h1 class="span4">Tic Tac Toe</h1>
+        <div class="span4">
+          <div class="input-prepend input-append">
+            <span class="add-on win_text_4">O won</span>
+            <strong id="o_win_4" class="win_times_4 add-on">0</strong>
+            <span class="add-on">time(s)</span>
+          </div>
+          <div class="input-prepend input-append">
+            <span class="add-on win_text_4">X won</span>
+            <strong id="x_win_4" class="win_times_4 add-on">0</strong>
+            <span class="add-on">time(s)</span>
+          </div>            
+        </div>        
+      </div>
+      <ul class="row" id="game-4">
+        <li id="1" class="btn span1 enabled" >+</li>
+        <li id="2" class="btn span1 enabled">+</li>
+        <li id="3" class="btn span1 enabled">+</li>
+        <li id="4" class="btn span1 enabled">+</li>
+        <li id="5" class="btn span1 enabled">+</li>
+        <li id="6" class="btn span1 enabled">+</li>
+        <li id="7" class="btn span1 enabled">+</li>
+        <li id="8" class="btn span1 enabled">+</li>
+        <li id="9" class="btn span1 enabled">+</li>
+        <li id="10" class="btn span1 enabled" >+</li>
+        <li id="11" class="btn span1 enabled">+</li>
+        <li id="12" class="btn span1 enabled">+</li>
+        <li id="13" class="btn span1 enabled">+</li>
+        <li id="14" class="btn span1 enabled">+</li>
+        <li id="15" class="btn span1 enabled">+</li>
+        <li id="16" class="btn span1 enabled">+</li>
+      </ul>
+      <div class="row">
+        <a href="#" id="reset-4" onclick="" class="btn-success btn span4" >Restart</a><br><br>
+        <a href="#" id="reset-4" onclick="refresh()" class="btn-danger btn span4" >Reset</a>
+      </div>
+    </div>
+  </div>
+  <script src='https://code.jquery.com/jquery-1.7.2.min.js'></script>
+  <script  src="js/index.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

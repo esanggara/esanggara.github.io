@@ -1,0 +1,227 @@
+/*******tic-tac-toe 3x3******/
+#tic-tac-toe .disable {
+	text-transform:uppercase; 
+	font-size:30px; 
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+
+#tic-tac-toe #game li {
+	float:left; padding:0; 
+	list-style:none; 
+	text-align:center; 
+	margin-bottom:20px; 
+	color:#fff; height:60px; 
+	line-height:60px; 
+	font-size:40px; 
+	color:#ccc
+}
+
+#tic-tac-toe #game li.disable{
+	color:#fff
+}
+
+#tic-tac-toe #game {
+	float:left; 
+	padding:0; 
+	clear:both
+}
+
+.new_span {
+	width:226px
+}
+
+#tic-tac-toe #reset {
+	padding:5px 10px; 
+	color:#fff; 
+	font-family:inherit; 
+	font-size:16px; 
+	clear:both; 
+	cursor:pointer; 
+	float:left; 
+	text-align:center;
+	outline:none; 
+	width:204px;
+}
+
+.input-prepend span.pre_text {
+	width:55px
+}
+
+.input-prepend .span1{
+	width:93px
+}
+
+.input-prepend {
+	margin-bottom:10px
+}
+
+.clr {
+	clear:both; 
+	height:0
+}
+
+#tic-tac-toe h1 {
+	text-align:center; 
+	font-size:28px
+}
+
+#tic-tac-toe li::-moz-selection {
+	background:none;
+	color:#000;
+}
+
+#tic-tac-toe li::-webkit-selection {
+	background:none;
+	color:#000;
+}
+
+#tic-tac-toe {
+	width:220px; 
+	margin:0 auto
+}
+
+.input-append .win_times {
+	background:#fff; 
+	width:101px
+}
+
+.input-append .win_text {
+	width:52px
+}
+/*******tic-tac-toe END******/
+
+
+/*******tic-tac-toe 4x4******/
+#tic-tac-toe-4 .disable {
+	text-transform:uppercase; 
+	font-size:30px; 
+	font-family:Georgia, "Times New Roman", Times, serif
+}
+
+#tic-tac-toe-4 #game-4 li {
+	float:left; padding:0; 
+	list-style:none; 
+	text-align:center; 
+	margin-bottom:20px; 
+	color:#fff; height:60px; 
+	line-height:60px; 
+	font-size:40px; 
+	color:#ccc
+}
+
+#tic-tac-toe-4 #game-4 li.disable{
+	color:#fff
+}
+
+#tic-tac-toe-4 #game-4 {
+	float:right; 
+	padding:0; 
+	clear:both
+}
+
+.new_span_4 {
+	width:330px;
+}
+
+#tic-tac-toe-4 #reset-4 {
+	padding:5px 10px; 
+	color:#fff; 
+	font-family:inherit; 
+	font-size:16px; 
+	clear:both; 
+	cursor:pointer; 
+	float:left; 
+	text-align:center; 
+	outline:none; 
+	width:290px;
+}
+
+.input-prepend span.pre_text {
+	width:55px
+}
+
+.input-prepend .span1{
+	width:93px
+}
+
+.input-prepend {
+	margin-bottom:10px
+}
+
+.clr {
+	clear:both; 
+	height:0
+}
+
+#tic-tac-toe-4 h1 {
+	text-align:center; 
+	font-size:28px
+}
+
+#tic-tac-toe-4 li::-moz-selection {
+	background:none;
+	color:#000;
+}
+
+#tic-tac-toe-4 li::-webkit-selection {
+	background:none;
+	color:#000;
+}
+
+#tic-tac-toe-4 {
+	width:350px; 
+	margin:0 auto
+}
+
+.input-append .win_times_4 {
+	background:#fff; 
+	width:140px
+}
+
+.input-append .win_text_4 {
+	width:92px
+}
+/*******tic-tac-toe END******/
+
+
+/* ----- CSS ----- */
+#popup {
+  display: inline-block;
+  opacity: 0;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  padding: 1em;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #888;
+  box-shadow: 1px 1px .5em 0 rgba(0, 0, 0, .5);
+  transition: opacity .3s ease-in-out;
+}
+
+#popup.hidden {
+  display: none;
+}
+#popup.fade-in {
+  opacity: 1;
+}
+
+.modal-header {
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #ffbf00;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal-backdrop {
+	background-color: #ffff66;
+}
+
+.html {
+	background-color: #ffff00;
+}
