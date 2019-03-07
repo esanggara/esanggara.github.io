@@ -178,7 +178,7 @@ $("#typeofgame" && "#formatgame").on("change", function () {
 
 	  });
   };
-  } else {
+  } else if (formatgame == '4x4'){
   document.getElementById("tic-tac-toe-4").style.display = "block";
   var typeofgame = document.getElementById("typeofgame").value;
   if (typeofgame == '2players'){
@@ -350,9 +350,183 @@ $("#typeofgame" && "#formatgame").on("change", function () {
 
 	  });
   };
+  } else {
+  document.getElementById("tic-tac-toe-5").style.display = "block";
+  var typeofgame = document.getElementById("typeofgame").value;
+  if (typeofgame == '2players'){
+  	var x = "x"
+	var o = "o"
+	var count = 0;
+	var o_win = 0;
+	var x_win = 0;
+
+	$('#game-5 li').click(function(){
+	  if ($("#1_").hasClass('o') && $("#2_").hasClass('o') && $("#3_").hasClass('o') && $("#4_").hasClass('o')  && $("#4_").hasClass('o') || $("#6_").hasClass('o') && $("#7_").hasClass('o') && $("#8_").hasClass('o') && $("#9_").hasClass('o')  && $("#10_").hasClass('o') || $("#11_").hasClass('o') && $("#12_").hasClass('o') && $("#13_").hasClass('o') && $("#14_").hasClass('o')  && $("#15_").hasClass('o') || $("#16_").hasClass('o') && $("#17_").hasClass('o') && $("#18_").hasClass('o') && $("#19_").hasClass('o')  && $("#20_").hasClass('o') || $("#21_").hasClass('o') && $("#22_").hasClass('o') && $("#23_").hasClass('o') && $("#24_").hasClass('x')  && $("#25_").hasClass('o') || $("#1_").hasClass('o') && $("#6_").hasClass('o') && $("#11_").hasClass('o') && $("#16_").hasClass('o')  && $("#21_").hasClass('o') || $("#2_").hasClass('o') && $("#7_").hasClass('o') && $("#12_").hasClass('o') && $("#17_").hasClass('o')  && $("#22_").hasClass('o') || $("#3_").hasClass('o') && $("#8_").hasClass('o') && $("#13_").hasClass('o') && $("#18_").hasClass('o')  && $("#23_").hasClass('o') || $("#4_").hasClass('o') && $("#9_").hasClass('o') && $("#14_").hasClass('o') && $("#19_").hasClass('o')  && $("#24_").hasClass('o') || $("#5_").hasClass('o') && $("#10_").hasClass('o') && $("#15_").hasClass('o') && $("#20_").hasClass('o')  && $("#25_").hasClass('o') || $("#1_").hasClass('o') && $("#7_").hasClass('o') && $("#13_").hasClass('o') && $("#19_").hasClass('o')  && $("#25_").hasClass('o') || $("#5_").hasClass('o') && $("#9_").hasClass('o') && $("#13_").hasClass('o') && $("#17_").hasClass('o')  && $("#21_").hasClass('o'))
+	   {
+		alert('O has won the game. Start a new game')
+		$("#game-5 li").text("+");
+		$("#game-5 li").removeClass('disable')
+		$("#game-5 li").removeClass('o')
+		$("#game-5 li").removeClass('x')
+		$("#game-5 li").removeClass('btn-primary')
+		$("#game-5 li").removeClass('btn-info')
+	   }
+	  else if ($("#1_").hasClass('x') && $("#2_").hasClass('x') && $("#3_").hasClass('x') && $("#4_").hasClass('x')  && $("#4_").hasClass('x') || $("#6_").hasClass('x') && $("#7_").hasClass('x') && $("#8_").hasClass('x') && $("#9_").hasClass('x')  && $("#10_").hasClass('x') || $("#11_").hasClass('x') && $("#12_").hasClass('x') && $("#13_").hasClass('x') && $("#14_").hasClass('x')  && $("#15_").hasClass('x') || $("#16_").hasClass('x') && $("#17_").hasClass('x') && $("#18_").hasClass('x') && $("#19_").hasClass('x')  && $("#20_").hasClass('x') || $("#21_").hasClass('x') && $("#22_").hasClass('x') && $("#23_").hasClass('x') && $("#24_").hasClass('x')  && $("#25_").hasClass('x') || $("#1_").hasClass('x') && $("#6_").hasClass('x') && $("#11_").hasClass('x') && $("#16_").hasClass('x')  && $("#21_").hasClass('x') || $("#2_").hasClass('x') && $("#7_").hasClass('x') && $("#12_").hasClass('x') && $("#17_").hasClass('x')  && $("#22_").hasClass('x') || $("#3_").hasClass('x') && $("#8_").hasClass('x') && $("#13_").hasClass('x') && $("#18_").hasClass('x')  && $("#23_").hasClass('x') || $("#4_").hasClass('x') && $("#9_").hasClass('x') && $("#14_").hasClass('x') && $("#19_").hasClass('x')  && $("#24_").hasClass('x') || $("#5_").hasClass('x') && $("#10_").hasClass('x') && $("#15_").hasClass('x') && $("#20_").hasClass('x')  && $("#25_").hasClass('x') || $("#1_").hasClass('x') && $("#7_").hasClass('x') && $("#13_").hasClass('x') && $("#19_").hasClass('x')  && $("#25_").hasClass('x') || $("#5_").hasClass('x') && $("#9_").hasClass('x') && $("#13_").hasClass('x') && $("#17_").hasClass('x')  && $("#21_").hasClass('x'))
+	  {
+	   alert('X wins has won the game. Start a new game')
+	   	$("#game-5 li").text("+");
+		$("#game-5 li").removeClass('disable')
+		$("#game-5 li").removeClass('o')
+		$("#game-5 li").removeClass('x')
+		$("#game-5 li").removeClass('btn-primary')
+		$("#game-5 li").removeClass('btn-info')	
+	  }
+	  else if (count == 25)
+	  {
+		alert('Its a tie. It will restart.')
+		$("#game-5 li").text("+");
+		$("#game-5 li").removeClass('disable')
+		$("#game-5 li").removeClass('o')
+		$("#game-5 li").removeClass('x')
+		$("#game-5 li").removeClass('btn-primary')
+		$("#game-5 li").removeClass('btn-info')
+		count = 0
+	  }
+	  else if ($(this).hasClass('disable'))
+	  {
+	    alert('Already selected')
+	  }
+	  else if (count%2 == 0)
+	  {
+		  count++
+		  $(this).text(o)
+	      $(this).addClass('disable o btn-primary')
+		    if ($("#1_").hasClass('o') && $("#2_").hasClass('o') && $("#3_").hasClass('o') && $("#4_").hasClass('o')  && $("#4_").hasClass('o') || $("#6_").hasClass('o') && $("#7_").hasClass('o') && $("#8_").hasClass('o') && $("#9_").hasClass('o')  && $("#10_").hasClass('o') || $("#11_").hasClass('o') && $("#12_").hasClass('o') && $("#13_").hasClass('o') && $("#14_").hasClass('o')  && $("#15_").hasClass('o') || $("#16_").hasClass('o') && $("#17_").hasClass('o') && $("#18_").hasClass('o') && $("#19_").hasClass('o')  && $("#20_").hasClass('o') || $("#21_").hasClass('o') && $("#22_").hasClass('o') && $("#23_").hasClass('o') && $("#24_").hasClass('x')  && $("#25_").hasClass('o') || $("#1_").hasClass('o') && $("#6_").hasClass('o') && $("#11_").hasClass('o') && $("#16_").hasClass('o')  && $("#21_").hasClass('o') || $("#2_").hasClass('o') && $("#7_").hasClass('o') && $("#12_").hasClass('o') && $("#17_").hasClass('o')  && $("#22_").hasClass('o') || $("#3_").hasClass('o') && $("#8_").hasClass('o') && $("#13_").hasClass('o') && $("#18_").hasClass('o')  && $("#23_").hasClass('o') || $("#4_").hasClass('o') && $("#9_").hasClass('o') && $("#14_").hasClass('o') && $("#19_").hasClass('o')  && $("#24_").hasClass('o') || $("#5_").hasClass('o') && $("#10_").hasClass('o') && $("#15_").hasClass('o') && $("#20_").hasClass('o')  && $("#25_").hasClass('o') || $("#1_").hasClass('o') && $("#7_").hasClass('o') && $("#13_").hasClass('o') && $("#19_").hasClass('o')  && $("#25_").hasClass('o') || $("#5_").hasClass('o') && $("#9_").hasClass('o') && $("#13_").hasClass('o') && $("#17_").hasClass('o')  && $("#21_").hasClass('o'))
+		    {
+		   alert('O wins')
+		   count = 0
+		   o_win++
+		   $('#o_win_5').text(o_win)
+	        }
+	  }
+	   else  
+	  {
+		  count++
+	    $(this).text(x)
+	    $(this).addClass('disable x btn-info')
+		   if ($("#1_").hasClass('x') && $("#2_").hasClass('x') && $("#3_").hasClass('x') && $("#4_").hasClass('x')  && $("#4_").hasClass('x') || $("#6_").hasClass('x') && $("#7_").hasClass('x') && $("#8_").hasClass('x') && $("#9_").hasClass('x')  && $("#10_").hasClass('x') || $("#11_").hasClass('x') && $("#12_").hasClass('x') && $("#13_").hasClass('x') && $("#14_").hasClass('x')  && $("#15_").hasClass('x') || $("#16_").hasClass('x') && $("#17_").hasClass('x') && $("#18_").hasClass('x') && $("#19_").hasClass('x')  && $("#20_").hasClass('x') || $("#21_").hasClass('x') && $("#22_").hasClass('x') && $("#23_").hasClass('x') && $("#24_").hasClass('x')  && $("#25_").hasClass('x') || $("#1_").hasClass('x') && $("#6_").hasClass('x') && $("#11_").hasClass('x') && $("#16_").hasClass('x')  && $("#21_").hasClass('x') || $("#2_").hasClass('x') && $("#7_").hasClass('x') && $("#12_").hasClass('x') && $("#17_").hasClass('x')  && $("#22_").hasClass('x') || $("#3_").hasClass('x') && $("#8_").hasClass('x') && $("#13_").hasClass('x') && $("#18_").hasClass('x')  && $("#23_").hasClass('x') || $("#4_").hasClass('x') && $("#9_").hasClass('x') && $("#14_").hasClass('x') && $("#19_").hasClass('x')  && $("#24_").hasClass('x') || $("#5_").hasClass('x') && $("#10_").hasClass('x') && $("#15_").hasClass('x') && $("#20_").hasClass('x')  && $("#25_").hasClass('x') || $("#1_").hasClass('x') && $("#7_").hasClass('x') && $("#13_").hasClass('x') && $("#19_").hasClass('x')  && $("#25_").hasClass('x') || $("#5_").hasClass('x') && $("#9_").hasClass('x') && $("#13_").hasClass('x') && $("#17_").hasClass('x')  && $("#21_").hasClass('x'))
+	        {
+		 alert('X wins')
+		 count = 0
+		 x_win++
+		 $('#x_win_5').text(x_win)
+	        }
+	  }
+
+	   });
+	    $("#reset-5").click(function () {
+	    $("#game-5 li").text("+");
+		$("#game-5 li").addClass('enabled')
+		$("#game-5 li").removeClass('disable')
+		$("#game-5 li").removeClass('o')
+		$("#game-5 li").removeClass('x')
+		$("#game-5 li").removeClass('btn-primary')
+		$("#game-5 li").removeClass('btn-info')
+		count = 0
+
+	  });
+  	} else {
+  	var x = "x"
+	var o = "o"
+	var count = 0;
+	var o_win = 0;
+	var x_win = 0;
+
+	$('#game-5 li').click(function(){
+	  if ($("#1_").hasClass('o') && $("#2_").hasClass('o') && $("#3_").hasClass('o') && $("#4_").hasClass('o')  && $("#4_").hasClass('o') || $("#6_").hasClass('o') && $("#7_").hasClass('o') && $("#8_").hasClass('o') && $("#9_").hasClass('o')  && $("#10_").hasClass('o') || $("#11_").hasClass('o') && $("#12_").hasClass('o') && $("#13_").hasClass('o') && $("#14_").hasClass('o')  && $("#15_").hasClass('o') || $("#16_").hasClass('o') && $("#17_").hasClass('o') && $("#18_").hasClass('o') && $("#19_").hasClass('o')  && $("#20_").hasClass('o') || $("#21_").hasClass('o') && $("#22_").hasClass('o') && $("#23_").hasClass('o') && $("#24_").hasClass('x')  && $("#25_").hasClass('o') || $("#1_").hasClass('o') && $("#6_").hasClass('o') && $("#11_").hasClass('o') && $("#16_").hasClass('o')  && $("#21_").hasClass('o') || $("#2_").hasClass('o') && $("#7_").hasClass('o') && $("#12_").hasClass('o') && $("#17_").hasClass('o')  && $("#22_").hasClass('o') || $("#3_").hasClass('o') && $("#8_").hasClass('o') && $("#13_").hasClass('o') && $("#18_").hasClass('o')  && $("#23_").hasClass('o') || $("#4_").hasClass('o') && $("#9_").hasClass('o') && $("#14_").hasClass('o') && $("#19_").hasClass('o')  && $("#24_").hasClass('o') || $("#5_").hasClass('o') && $("#10_").hasClass('o') && $("#15_").hasClass('o') && $("#20_").hasClass('o')  && $("#25_").hasClass('o') || $("#1_").hasClass('o') && $("#7_").hasClass('o') && $("#13_").hasClass('o') && $("#19_").hasClass('o')  && $("#25_").hasClass('o') || $("#5_").hasClass('o') && $("#9_").hasClass('o') && $("#13_").hasClass('o') && $("#17_").hasClass('o')  && $("#21_").hasClass('o'))
+	   {
+		alert('O has won the game. Start a new game')
+		$("#game-5 li").text("+");
+		$("#game-5 li").addClass('enable')
+		$("#game-5 li").removeClass('disable')
+		$("#game-5 li").removeClass('o')
+		$("#game-5 li").removeClass('x')
+		$("#game-5 li").removeClass('btn-primary')
+		$("#game-5 li").removeClass('btn-info')
+	   }
+	  else if ($("#1_").hasClass('x') && $("#2_").hasClass('x') && $("#3_").hasClass('x') && $("#4_").hasClass('x')  && $("#4_").hasClass('x') || $("#6_").hasClass('x') && $("#7_").hasClass('x') && $("#8_").hasClass('x') && $("#9_").hasClass('x')  && $("#10_").hasClass('x') || $("#11_").hasClass('x') && $("#12_").hasClass('x') && $("#13_").hasClass('x') && $("#14_").hasClass('x')  && $("#15_").hasClass('x') || $("#16_").hasClass('x') && $("#17_").hasClass('x') && $("#18_").hasClass('x') && $("#19_").hasClass('x')  && $("#20_").hasClass('x') || $("#21_").hasClass('x') && $("#22_").hasClass('x') && $("#23_").hasClass('x') && $("#24_").hasClass('x')  && $("#25_").hasClass('x') || $("#1_").hasClass('x') && $("#6_").hasClass('x') && $("#11_").hasClass('x') && $("#16_").hasClass('x')  && $("#21_").hasClass('x') || $("#2_").hasClass('x') && $("#7_").hasClass('x') && $("#12_").hasClass('x') && $("#17_").hasClass('x')  && $("#22_").hasClass('x') || $("#3_").hasClass('x') && $("#8_").hasClass('x') && $("#13_").hasClass('x') && $("#18_").hasClass('x')  && $("#23_").hasClass('x') || $("#4_").hasClass('x') && $("#9_").hasClass('x') && $("#14_").hasClass('x') && $("#19_").hasClass('x')  && $("#24_").hasClass('x') || $("#5_").hasClass('x') && $("#10_").hasClass('x') && $("#15_").hasClass('x') && $("#20_").hasClass('x')  && $("#25_").hasClass('x') || $("#1_").hasClass('x') && $("#7_").hasClass('x') && $("#13_").hasClass('x') && $("#19_").hasClass('x')  && $("#25_").hasClass('x') || $("#5_").hasClass('x') && $("#9_").hasClass('x') && $("#13_").hasClass('x') && $("#17_").hasClass('x')  && $("#21_").hasClass('x'))
+	  {
+	   alert('X wins has won the game. Start a new game')
+	   $("#game-5 li").text("+");
+		$("#game-5 li").addClass('enable')
+		$("#game-5 li").removeClass('disable')
+		$("#game-5 li").removeClass('o')
+		$("#game-5 li").removeClass('x')
+		$("#game-5 li").removeClass('btn-primary')
+		$("#game-5 li").removeClass('btn-info')	
+	  }
+	  else if (count == 25)
+	  {
+		alert('Its a tie. It will restart.')
+		$("#game-5 li").text("+");
+		$("#game-5 li").addClass('enable')
+		$("#game-5 li").removeClass('disable')
+		$("#game-5 li").removeClass('o')
+		$("#game-5 li").removeClass('x')
+		$("#game-5 li").removeClass('btn-primary')
+		$("#game-5 li").removeClass('btn-info')
+		count = 0
+	  }
+	  else if ($(this).hasClass('disable'))
+	  {
+	    alert('Already selected')
+	  }
+	  else (count%2 == 0)
+	  {
+		  count++
+		  $(this).text(o)
+		  $(this).removeClass('enable')
+	      $(this).addClass('disable o btn-primary')
+		    if ($("#1_").hasClass('o') && $("#2_").hasClass('o') && $("#3_").hasClass('o') && $("#4_").hasClass('o')  && $("#4_").hasClass('o') || $("#6_").hasClass('o') && $("#7_").hasClass('o') && $("#8_").hasClass('o') && $("#9_").hasClass('o')  && $("#10_").hasClass('o') || $("#11_").hasClass('o') && $("#12_").hasClass('o') && $("#13_").hasClass('o') && $("#14_").hasClass('o')  && $("#15_").hasClass('o') || $("#16_").hasClass('o') && $("#17_").hasClass('o') && $("#18_").hasClass('o') && $("#19_").hasClass('o')  && $("#20_").hasClass('o') || $("#21_").hasClass('o') && $("#22_").hasClass('o') && $("#23_").hasClass('o') && $("#24_").hasClass('x')  && $("#25_").hasClass('o') || $("#1_").hasClass('o') && $("#6_").hasClass('o') && $("#11_").hasClass('o') && $("#16_").hasClass('o')  && $("#21_").hasClass('o') || $("#2_").hasClass('o') && $("#7_").hasClass('o') && $("#12_").hasClass('o') && $("#17_").hasClass('o')  && $("#22_").hasClass('o') || $("#3_").hasClass('o') && $("#8_").hasClass('o') && $("#13_").hasClass('o') && $("#18_").hasClass('o')  && $("#23_").hasClass('o') || $("#4_").hasClass('o') && $("#9_").hasClass('o') && $("#14_").hasClass('o') && $("#19_").hasClass('o')  && $("#24_").hasClass('o') || $("#5_").hasClass('o') && $("#10_").hasClass('o') && $("#15_").hasClass('o') && $("#20_").hasClass('o')  && $("#25_").hasClass('o') || $("#1_").hasClass('o') && $("#7_").hasClass('o') && $("#13_").hasClass('o') && $("#19_").hasClass('o')  && $("#25_").hasClass('o') || $("#5_").hasClass('o') && $("#9_").hasClass('o') && $("#13_").hasClass('o') && $("#17_").hasClass('o')  && $("#21_").hasClass('o'))
+			{o
+			   alert('O wins')
+			   count = 0
+			   o_win++
+			   $('#o_win_5').text(o_win)
+	       	}
+
+	       	var getid = document.querySelector('.enabled').id;
+	       	var id = '#'+getid;
+			$(id).text(x);
+		    $(id).removeClass('enabled');
+			$(id).addClass('disable x btn-info');
+			if ($("#1_").hasClass('x') && $("#2_").hasClass('x') && $("#3_").hasClass('x') && $("#4_").hasClass('x')  && $("#4_").hasClass('x') || $("#6_").hasClass('x') && $("#7_").hasClass('x') && $("#8_").hasClass('x') && $("#9_").hasClass('x')  && $("#10_").hasClass('x') || $("#11_").hasClass('x') && $("#12_").hasClass('x') && $("#13_").hasClass('x') && $("#14_").hasClass('x')  && $("#15_").hasClass('x') || $("#16_").hasClass('x') && $("#17_").hasClass('x') && $("#18_").hasClass('x') && $("#19_").hasClass('x')  && $("#20_").hasClass('x') || $("#21_").hasClass('x') && $("#22_").hasClass('x') && $("#23_").hasClass('x') && $("#24_").hasClass('x')  && $("#25_").hasClass('x') || $("#1_").hasClass('x') && $("#6_").hasClass('x') && $("#11_").hasClass('x') && $("#16_").hasClass('x')  && $("#21_").hasClass('x') || $("#2_").hasClass('x') && $("#7_").hasClass('x') && $("#12_").hasClass('x') && $("#17_").hasClass('x')  && $("#22_").hasClass('x') || $("#3_").hasClass('x') && $("#8_").hasClass('x') && $("#13_").hasClass('x') && $("#18_").hasClass('x')  && $("#23_").hasClass('x') || $("#4_").hasClass('x') && $("#9_").hasClass('x') && $("#14_").hasClass('x') && $("#19_").hasClass('x')  && $("#24_").hasClass('x') || $("#5_").hasClass('x') && $("#10_").hasClass('x') && $("#15_").hasClass('x') && $("#20_").hasClass('x')  && $("#25_").hasClass('x') || $("#1_").hasClass('x') && $("#7_").hasClass('x') && $("#13_").hasClass('x') && $("#19_").hasClass('x')  && $("#25_").hasClass('x') || $("#5_").hasClass('x') && $("#9_").hasClass('x') && $("#13_").hasClass('x') && $("#17_").hasClass('x')  && $("#21_").hasClass('x'))
+			        {
+					  alert('X wins')
+					  count = 0
+					  x_win++
+					  $('#x_win_5').text(x_win)
+			        }
+	  }
+
+	   });
+	    $("#reset-5").click(function () {
+	    $("#game-5 li").text("+");
+		$("#game-5 li").addClass('enabled')
+		$("#game-5 li").removeClass('disable')
+		$("#game-5 li").removeClass('o')
+		$("#game-5 li").removeClass('x')
+		$("#game-5 li").removeClass('btn-primary')
+		$("#game-5 li").removeClass('btn-info')
+		count = 0
+
+	  });
+  };
   }
 });
 
 function refresh(){
 	location.reload();
+	$('#typeofgame').prop('selectedIndex',0); 
+	$('#formatgame').prop('selectedIndex',0);
 }

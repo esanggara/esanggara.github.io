@@ -18,16 +18,19 @@
           <p>Tic-tac-toe (American English), noughts and crosses (British English) or Xs and Os, is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.<i> - Wikipedia</i><p>
           <br>
           <p>Chose Your Game!</p>
-          <select class="typeofgame" id="typeofgame">
-            <option value="">Select Game</option>
-            <option value="2players">2 Players</option>
-            <option value="vscomputer">vs Computer</option>
-          </select>
-          <select class="formatgame" id="formatgame">
-            <option value="">Select Format</option>
-            <option value="3x3">3 X 3</option>
-            <option value="4x4">4 X 4</option>
-          </select>
+          <form id="form_option"></form>
+            <select class="typeofgame" id="typeofgame">
+              <option value="">Select Game</option>
+              <option value="2players">2 Players</option>
+              <option value="vscomputer">vs Computer</option>
+            </select>
+            <select class="formatgame" id="formatgame">
+              <option value="">Select Format</option>
+              <option value="3x3">3 X 3</option>
+              <option value="4x4">4 X 4</option>
+              <option value="5x5">5 X 5</option>
+            </select>
+          </form>
           <br>
         </div>
       </div>
@@ -111,6 +114,59 @@
       </div>
     </div>
   </div>
+
+  <div id="tic-tac-toe-5" style="display: none;">
+    <div class="span5 new_span_5">
+      <div class="row">
+      <h1 class="span5">Tic Tac Toe</h1>
+        <div class="span5">
+          <div class="input-prepend input-append">
+            <span class="add-on win_text_5">O won</span>
+            <strong id="o_win_5" class="win_times_5 add-on">0</strong>
+            <span class="add-on">time(s)</span>
+          </div>
+          <div class="input-prepend input-append">
+            <span class="add-on win_text_5">X won</span>
+            <strong id="x_win_5" class="win_times_5 add-on">0</strong>
+            <span class="add-on">time(s)</span>
+          </div>            
+        </div>        
+      </div>
+      <ul class="row" id="game-5">
+        <li id="1_" class="btn span1 enabled" >+</li>
+        <li id="2_" class="btn span1 enabled">+</li>
+        <li id="3_" class="btn span1 enabled">+</li>
+        <li id="4_" class="btn span1 enabled">+</li>
+        <li id="5_" class="btn span1 enabled">+</li>
+        <li id="6_" class="btn span1 enabled">+</li>
+        <li id="7_" class="btn span1 enabled">+</li>
+        <li id="8_" class="btn span1 enabled">+</li>
+        <li id="9_" class="btn span1 enabled">+</li>
+        <li id="10_" class="btn span1 enabled" >+</li>
+        <li id="11_" class="btn span1 enabled">+</li>
+        <li id="12_" class="btn span1 enabled">+</li>
+        <li id="13_" class="btn span1 enabled">+</li>
+        <li id="14_" class="btn span1 enabled">+</li>
+        <li id="15_" class="btn span1 enabled">+</li>
+        <li id="16_" class="btn span1 enabled">+</li>
+        <li id="17_" class="btn span1 enabled" >+</li>
+        <li id="18_" class="btn span1 enabled" >+</li>
+        <li id="19_" class="btn span1 enabled" >+</li>
+        <li id="20_" class="btn span1 enabled" >+</li>
+        <li id="21_" class="btn span1 enabled" >+</li>
+        <li id="22_" class="btn span1 enabled" >+</li>
+        <li id="23_" class="btn span1 enabled" >+</li>
+        <li id="24_" class="btn span1 enabled" >+</li>
+        <li id="25_" class="btn span1 enabled" >+</li>
+      </ul>
+      <div class="row">
+        <a href="#" id="reset-5" onclick="" class="btn-success btn span5" >Restart</a><br><br>
+        <a href="#" id="reset-5" onclick="refresh()" class="btn-danger btn span5" >Reset</a>
+      </div>
+    </div>
+  </div>
+
+
   <script src='https://code.jquery.com/jquery-1.7.2.min.js'></script>
   <script  src="js/index.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
